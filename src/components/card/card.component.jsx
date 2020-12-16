@@ -3,7 +3,7 @@ import React from 'react';
 import './card.styles.css';
 
 const Card = ({
-  player: { Player_Name, Player_Id, Country, DOB, Batting_Hand, Bowling_Skill },
+  entity: { Player_Name, Player_Id, Country, DOB, Batting_Hand, Bowling_Skill },
 }) => (
   <div className="card-container">
     <img

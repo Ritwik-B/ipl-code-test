@@ -1,0 +1,10 @@
+[
+  {
+    "catergory": "Player",
+    "property": "Player_Name"
+  },
+  {
+    "catergory": "Team",
+    "property": "Team_Name"
+  }
+]

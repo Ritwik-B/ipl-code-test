@@ -4,12 +4,12 @@ import Card from '../card/card.component';
 
 import './card-list.styles.css';
 
-const CardList = ({ playerData }) => (
+const CardList = ({ entityData }) => (
   <div className="card-list">
-    {playerData
-      .filter((player, idx) => idx < 8)
-      .map((player) => (
-        <Card key={player.Player_Id} player={player} />
+    {entityData
+      .filter((entity, idx) => idx < 8)
+      .map((entity) => (
+        <Card key={entity.Player_Id} entity={entity} />
       ))}
   </div>
 );
