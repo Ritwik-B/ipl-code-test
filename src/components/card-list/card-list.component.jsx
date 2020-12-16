@@ -4,11 +4,13 @@ import Card from '../card/card.component';
 
 import './card-list.styles.css';
 
-const CardList = (props) => (
+const CardList = ({ playerData }) => (
   <div className="card-list">
-    {props.players.map((player) => (
-      <Card key={player.Player_Id} player={player} />
-    ))}
+    {playerData
+      .filter((player, idx) => idx < 8)
+      .map((player) => (
+        <Card key={player.Player_Id} player={player} />
+      ))}
   </div>
 );
 

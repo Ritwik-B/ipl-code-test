@@ -6,7 +6,7 @@ const SearchField = ({ onSearchChange }) => (
   <input
     className="search-field"
     type="search"
-    placeholder="search players"
+    placeholder="Search"
     onChange={onSearchChange}
   />
 );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import SearchField from './components/search-field/search-field.component.jsx';
 import CardList from './components/card-list/card-list.component.jsx';
@@ -7,12 +7,9 @@ import IPL_DATA from './data.json';
 import './App.css';
 
 const App = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(IPL_DATA);
   const [searchTerm, setSearchTerm] = useState('');
-
-  useEffect(() => {
-    setData(IPL_DATA);
-  }, []);
+  const [showAll, setShowAll] = useState(false);
 
   const handleChange = (e) => setSearchTerm(e.target.value);
 
@@ -24,7 +21,13 @@ const App = () => {
     <div className="App">
       <h1>IPL Directory</h1>
       <SearchField onSearchChange={handleChange} />
-      <CardList players={filteredData} />
+      <div className="button-container">
+        <button className="button" onClick={() => setShowAll(!showAll)}>
+          Show All
+        </button>
+        <button className="button">Filters</button>
+      </div>
+      <CardList playerData={filteredData} showAll={showAll} />
     </div>
   );
 };
