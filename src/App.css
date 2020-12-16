@@ -1,3 +1,12 @@
 .App {
   text-align: center;
+  background-image: url('./assets/cool-background\ \(1\).png');
+  margin-top: 0px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 72px;
+  color: #030825;
+  margin-top: 0px;
 }
