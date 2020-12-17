@@ -1,10 +1,12 @@
-# Getting Started with Create React App
+# IPL Directory Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Optimization
 
-## Available Scripts
+Used react-visibility-sensor to only render components that are visible to the user hence cutting render time for invisible components.
 
-In the project directory, you can run:
+- Before react-visibility-sensor: render time 170ms
+  ![Image After](https://imgur.com/a/OzaZ3x7)
+- After react-visibility-sensor: render time 70ms
 
 ### `npm start`
 
