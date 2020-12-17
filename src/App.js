@@ -39,7 +39,10 @@ const App = () => {
   return (
     <div className="App">
       <h1>IPL Directory</h1>
-      <SearchField onSearchChange={handleSearchChange} />
+      <SearchField
+        onSearchChange={handleSearchChange}
+        filterCategory={filterCategory}
+      />
       <div className="filter-card-list-container">
         <FilterList
           onFilterChange={setFilterCategory}

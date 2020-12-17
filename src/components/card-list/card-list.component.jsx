@@ -14,16 +14,14 @@ const CardList = ({ entityData, filterCategory }) => {
 
   return (
     <div className="card-list">
-      {entityData
-        .filter((entity, idx) => idx < 8)
-        .map((entity) => (
-          <Card
-            key={entity[categoryId]}
-            entity={entity}
-            filterCategory={filterCategory}
-            categoryId={categoryId}
-          />
-        ))}
+      {entityData.map((entity) => (
+        <Card
+          key={entity[categoryId]}
+          entity={entity}
+          filterCategory={filterCategory}
+          categoryId={categoryId}
+        />
+      ))}
     </div>
   );
 };

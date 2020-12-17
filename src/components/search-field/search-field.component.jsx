@@ -2,11 +2,11 @@ import React from 'react';
 
 import './search-field.styles.css';
 
-const SearchField = ({ onSearchChange }) => (
+const SearchField = ({ onSearchChange, filterCategory }) => (
   <input
     className="search-field"
     type="search"
-    placeholder="Search"
+    placeholder={`Search ${filterCategory}`}
     onChange={onSearchChange}
   />
 );
