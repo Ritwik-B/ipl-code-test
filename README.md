@@ -2,6 +2,8 @@
 
 live link: https://ipl-directory-page.herokuapp.com/
 
+Built with React, deployed to heroku
+
 ## Page Load Time
 
 - Time to interactive: 1.7s (checked with Lighthouse)
