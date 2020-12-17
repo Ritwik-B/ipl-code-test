@@ -2,22 +2,29 @@ import React from 'react';
 
 import './card.styles.css';
 
-const Card = ({
-  entity: { Player_Name, Player_Id, Country, DOB, Batting_Hand, Bowling_Skill },
-}) => (
+const Card = ({ entity, filterCategory, categoryId }) => (
   <div className="card-container">
     <img
-      alt="player"
-      src={`https://robohash.org/${Player_Id}?set=set2&size=180x180`}
+      alt="entity"
+      src={`https://robohash.org/${entity[categoryId]}?set=set2&size=180x180`}
     />
     <div className="card-info-container">
-      <h2> {Player_Name} </h2>
-      <div className="card-details">
-        <p> Country: {Country} </p>
-        <p> DOB: {DOB} </p>
-        <p> Bat: {Batting_Hand} </p>
-        <p> Bowl: {Bowling_Skill} </p>
-      </div>
+      {filterCategory === 'Player_Name' ? (
+        <React.Fragment>
+          <h2> {entity.Player_Name} </h2>
+          <div className="card-details">
+            <p> Country: {entity.Country} </p>
+            <p> DOB: {entity.DOB} </p>
+            <p> Bat: {entity.Batting_Hand} </p>
+            <p> Bowl: {entity.Bowling_Skill} </p>
+          </div>
+        </React.Fragment>
+      ) : (
+        <React.Fragment>
+          <h2> {entity.Team_Name} </h2>
+          <p> Short Name: {entity.Team_Short_Code} </p>
+        </React.Fragment>
+      )}
     </div>
   </div>
 );
