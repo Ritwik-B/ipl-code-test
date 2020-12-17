@@ -4,11 +4,15 @@ import FILTER_DATA from '../../data/filter.data.json';
 
 import './filter-list.styles.css';
 
-const FilterList = ({ onFilterChange }) => (
+const FilterList = ({ onFilterChange, filterCategory }) => (
   <div className="filter-container">
     {FILTER_DATA.map((button) => (
       <span
-        className="filter-button"
+        className={`${
+          filterCategory === button.property
+            ? 'active-filter-button'
+            : 'filter-button'
+        }`}
         onClick={() => onFilterChange(button.property)}
       >
         {button.catergory}

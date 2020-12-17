@@ -11,7 +11,7 @@ import TEAM_IPL_DATA from './data/team.data.json';
 import './App.css';
 
 const App = () => {
-  const [filterCategory, setFilterCategory] = useState('Team_Name');
+  const [filterCategory, setFilterCategory] = useState('Player_Name');
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -41,7 +41,10 @@ const App = () => {
       <h1>IPL Directory</h1>
       <SearchField onSearchChange={handleSearchChange} />
       <div className="filter-card-list-container">
-        <FilterList onFilterChange={setFilterCategory} />
+        <FilterList
+          onFilterChange={setFilterCategory}
+          filterCategory={filterCategory}
+        />
         {searchTerm ? (
           <CardList
             entityData={filterData(data)}
