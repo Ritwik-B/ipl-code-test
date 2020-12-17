@@ -2,7 +2,7 @@
 
 ## Page Load Time
 
-- Time to interactive: 1.3s (checked with Lighthouse)
+- Time to interactive: 1.7s (checked with Lighthouse)
 
   ![Image Before](./img/load-time.png)
 
