@@ -6,7 +6,7 @@ Built with React, deployed to heroku
 
 ## Page Load Time
 
-- Time to interactive: 1.2s (checked with Lighthouse)
+- Time to interactive: 1.1s (checked with Lighthouse)
 
   ![Image Before](./img/load-time.png)
 
