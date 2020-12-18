@@ -8,6 +8,7 @@ const FilterList = ({ onFilterChange, filterCategory }) => (
   <div className="filter-container">
     {FILTER_DATA.map((button) => (
       <span
+        key={button.Id}
         className={`${
           filterCategory === button.property
             ? 'active-filter-button'
