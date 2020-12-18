@@ -8,7 +8,7 @@ Built with React, deployed to heroku
 
 - Time to interactive: 1.1s (checked with Lighthouse)
 
-  ![Image Before](./img/load-time.png)
+  ![Image Before](./img/load-time1.png)
 
 ## Optimization
 
